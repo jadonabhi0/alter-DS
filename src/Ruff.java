@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Ruff {
 
    public static int encode(String str){
@@ -39,8 +41,12 @@ public class Ruff {
    }
 
     public static void main(String[] args) {
-//        System.out.println(encode("aaabcccdddd"));
-        System.out.println(helper("aaabcccdddd", 2, "aaabcccdddd".length()));
+        ArrayList<Integer> list = new ArrayList<>();
+        ArrayDeque<Integer> dq = new ArrayDeque<>();
+
+        long[] ar = new long[]{-23,234,12,-575,87,56,74,567,4,657,4,-5,-45};
+        Arrays.sort(ar);
+        System.out.println(Arrays.toString(ar));
 
     }
 }

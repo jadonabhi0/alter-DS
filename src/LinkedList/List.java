@@ -86,12 +86,49 @@ public class List<E> {
    public void reverseRecursive(){
        Node temp = head;
        reverseRecursive_(temp);
-
-
    }
 
 
 
+   public boolean createCycle(E val){
+       Node temp = head;
+       Node prev = null;
+       Node matchNode = null;
+       boolean flag = false;
+       while(temp != null){
+
+           if (temp.data == val) {
+               matchNode = temp;
+               flag = true;
+           }
+           prev = temp;
+           temp = temp.next;
+       }
+       if (flag){
+           prev.next = matchNode;
+           return true;
+       }
+       return false;
+   }
+
+    /**
+     * @author
+     * @return
+     */
+   public boolean hasCycle(){
+       Node slow = head;
+       Node fast = head;
+
+       while (fast != null && fast.next != null){
+           slow = slow.next;
+           fast = fast.next.next;
+           if (slow == fast) break;
+       }
+       return slow == fast ? true : false;
+
+    }
+
 
 
 }
+
