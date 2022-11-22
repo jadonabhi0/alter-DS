@@ -91,6 +91,8 @@ public class List<E> {
 
 
    public boolean createCycle(E val){
+
+
        Node temp = head;
        Node prev = null;
        Node matchNode = null;
