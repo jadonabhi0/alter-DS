@@ -41,12 +41,8 @@ public class Ruff {
    }
 
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        ArrayDeque<Integer> dq = new ArrayDeque<>();
 
-        long[] ar = new long[]{-23,234,12,-575,87,56,74,567,4,657,4,-5,-45};
-        Arrays.sort(ar);
-        System.out.println(Arrays.toString(ar));
+
 
     }
 }

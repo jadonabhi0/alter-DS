@@ -130,6 +130,29 @@ public class List<E> {
 
     }
 
+    /**
+     * @return mid node of the linked list
+     */
+    private Node midNode(){
+       Node slow = head;
+       Node fast = head;
+       while(fast.next != null && fast.next.next != null){
+           slow = slow.next;
+           fast = fast.next.next;
+       }
+       return slow;
+    }
+
+//    private Node mergeTwoList(Node l1, Node l2){
+//        Node dummy = new Node(-1);
+//        Node node = dummy;
+//        while(l1 != null && l2 != null){
+//            if(l1.data < l2.data){
+//                node.next = l1;
+//                l1 = l1.next;
+//            }
+//        }
+//    }
 
 
 }
